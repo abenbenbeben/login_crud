@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>新規登録</title>
+    </head>
+    <body>
+        <!--flashメッセージここから-->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p style="background-color:aqua;">
+                        <b>{{message}}</b>
+                    </p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <!---flashメッセージここまで-->
+        <h2>ユーザーIDとパスワードを教えてください</h2>
+        <form method="POST" action="/registration_action">
+            <input placeholder="新規ユーザーID" type="text" name="user_id_new">
+            <input placeholder="新規パスワード" type="password" name="user_pw_new">
+            <input type="submit" value="登録">  
+        </form>
+        <br>
+        <a href="/">ログイン画面に戻る</a>
+    </body>
+</html>

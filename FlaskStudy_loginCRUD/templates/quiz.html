@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>問題画面</title>
+    </head>
+    <body>
+        <h2>下に表示されている都道府県の県庁所在地を正しく入力しよう！！</h2>
+        <p><strong>{{prefecture}}</strong>の県庁所在地は？？</p>
+        <p>{{f}}</p>
+        <form method="POST" action="/answercheck">
+            <input type="text" name="city" size="15">
+            <input type="submit" value="送信">
+        </form>
+    </body>
+</html>
