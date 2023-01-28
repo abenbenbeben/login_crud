@@ -186,7 +186,7 @@ def wikipedia():
 def wiki_answer():
     word = request.form['word']
     if word == '':
-        result = '入力がないため、該当する結果がありませんでした。'
+        result = '入力がないため、該当する結果がありませんでした。もう一度入力お願いします。'
     else:
         result = wiki(word)
         
